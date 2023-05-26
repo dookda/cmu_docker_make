@@ -24,3 +24,10 @@ docker build --tag ubuntu_gdal .
 
 # tag image
 docker tag ubuntu_gdal:latest ubuntu_gdal:v1.0.0
+
+# to push to docker hub
+docker login
+docker tag local-image:tag username/repository:tag
+e.g. docker tag ubuntu_gdal:latest sakdahomhuan/ubuntu_gdal:latest
+docker push username/repository:tag
+e.g. docker push sakdahomhuan/ubuntu_gdal:latest
