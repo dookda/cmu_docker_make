@@ -18,3 +18,9 @@ conda deactivate
 # export packagee
 python3 -m pip freeze > requirements.txt
 conda list --export > requirements.txt
+
+# build image form Dockerfile
+docker build --tag ubuntu_gdal .
+
+# tag image
+docker tag ubuntu_gdal:latest ubuntu_gdal:v1.0.0
